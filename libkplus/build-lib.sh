@@ -1,0 +1,2 @@
+docker run --rm -v "$PWD":/app -w /app golang:1.17 go build -buildmode=c-shared -o libkplus.so main.go util.go
+docker run --rm -v "$PWD":/app -w /app golang:1.17 env GOARCH=arm64 go build -buildmode=c-shared -o libkplus.arm64.so main.go util.go
